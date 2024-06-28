@@ -3,9 +3,15 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSetActive = (link) => {
+    setActiveLink(link);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -58,9 +64,13 @@ const Header = () => {
                 to="home"
                 smooth={true}
                 duration={500}
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 cursor-pointer"
+                className={`block py-2 px-3 rounded cursor-pointer ${
+                  activeLink === "home"
+                    ? "text-blue-700"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                }`}
                 aria-current="page"
-                onClick={toggleMenu}
+                onClick={() => handleSetActive("home")}
               >
                 Home
               </Link>
@@ -70,8 +80,12 @@ const Header = () => {
                 to="technologies"
                 smooth={true}
                 duration={500}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer"
-                onClick={toggleMenu}
+                className={`block py-2 px-3 rounded cursor-pointer ${
+                  activeLink === "technologies"
+                    ? "text-blue-700"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => handleSetActive("technologies")}
               >
                 Technologies
               </Link>
@@ -81,8 +95,12 @@ const Header = () => {
                 to="projects"
                 smooth={true}
                 duration={500}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer"
-                onClick={toggleMenu}
+                className={`block py-2 px-3 rounded cursor-pointer ${
+                  activeLink === "projects"
+                    ? "text-blue-700"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => handleSetActive("projects")}
               >
                 Projects
               </Link>
@@ -92,8 +110,12 @@ const Header = () => {
                 to="contacts"
                 smooth={true}
                 duration={500}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer"
-                onClick={toggleMenu}
+                className={`block py-2 px-3 rounded cursor-pointer ${
+                  activeLink === "contacts"
+                    ? "text-blue-700"
+                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => handleSetActive("contacts")}
               >
                 Contacts
               </Link>
