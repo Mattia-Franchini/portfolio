@@ -31,7 +31,7 @@ const Projects = () => {
           <div
             ref={ref2}
             className={`bg-white p-6 rounded-lg shadow-lg col-span-2 row-span-1 transform transition-transform duration-[2000ms] ${
-              inView2 ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+              inView2 ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
             }`}
           >
             <img src="src/assets/portfolioimg.png"></img>
@@ -44,7 +44,7 @@ const Projects = () => {
           <div
             ref={ref3}
             className={`bg-white p-6 rounded-lg shadow-lg col-span-1 row-span-1 transform transition-transform duration-[2000ms] ${
-              inView3 ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              inView3 ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}
           >
             <div className="h-40 bg-gray-300 rounded mb-4 animate-pulse"></div>
@@ -54,7 +54,7 @@ const Projects = () => {
           <div
             ref={ref4}
             className={`bg-white p-6 rounded-lg shadow-lg col-span-1 row-span-1 transform transition-transform duration-[2000ms] ${
-              inView4 ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              inView4 ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}
           >
             <div className="h-40 bg-gray-300 rounded mb-4 animate-pulse"></div>
