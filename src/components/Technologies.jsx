@@ -6,13 +6,13 @@ import { useInView } from "react-intersection-observer";
 const Technologies = () => {
   const [showTechs, setShowTechs] = useState(false);
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animazione scatta solo una volta
-    threshold: 0.5, // Trigger dell'animazione quando la sezione è a metà schermo
+    triggerOnce: true,
+    threshold: 0.5, 
   });
 
   useEffect(() => {
     if (inView) {
-      setShowTechs(true); // Mostra le tecnologie quando la sezione è visibile
+      setShowTechs(true);
     }
   }, [inView]);
 
