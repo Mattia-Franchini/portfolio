@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 const Header = () => {
@@ -13,6 +13,31 @@ const Header = () => {
     setActiveLink(link);
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "technologies", "projects", "contacts"];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveLink(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white border-gray-200 dark:bg-gray-800 h-16 z-50">
