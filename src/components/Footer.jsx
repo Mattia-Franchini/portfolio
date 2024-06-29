@@ -31,8 +31,7 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
-            <p className="text-gray-400 mb-2">Email: example@example.com</p>
-            <p className="text-gray-400 mb-4">Phone: (123) 456-7890</p>
+            <p className="text-gray-400 mb-2">Email: mattia.franchini005@gmail.com</p>
             <div className="flex space-x-4">
               <a href="https://github.com/Mattia-Franchini" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github fa-2x text-gray-400 hover:text-white"></i>
