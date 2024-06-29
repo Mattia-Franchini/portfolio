@@ -22,10 +22,10 @@ const Projects = () => {
             <h3 className="text-2xl font-bold mb-2">Studio amico</h3>
             <p className="text-gray-700 mb-4">Studio amico is a web app where you can give and receive free lessons (different subjects, for now it's only for a specific school)</p>
             <div className="mt-16 grid grid-cols-2 gap-4 pt-4">
-              <a href="https://studioamico.duckdns.org:5000/" className="text-blue-500 hover:underline">Link to website</a>
-              <a href="https://github.com/Mattia-Franchini/StudioAmicoFrontend" className="text-blue-500 hover:underline">Link to frontend github</a>
-              <a href="https://github.com/Mattia-Franchini/StudioAmicoBackend" className="text-blue-500 hover:underline">Link to backend github</a>
-              <a href="https://github.com/MattiaFranchini1/Progetto_GEP" className="text-blue-500 hover:underline">Link to project study</a>
+              <a href="https://studioamico.duckdns.org:5000/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link to website</a>
+              <a href="https://github.com/Mattia-Franchini/StudioAmicoFrontend" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link to frontend github</a>
+              <a href="https://github.com/Mattia-Franchini/StudioAmicoBackend" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link to backend github</a>
+              <a href="https://github.com/MattiaFranchini1/Progetto_GEP" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link to project study</a>
             </div>
           </div>
           <div
@@ -38,7 +38,7 @@ const Projects = () => {
             <h3 className="text-2xl font-bold mb-2">Portfolio</h3>
             <p className="text-gray-700">My personal portfolio, what you are seeing in this moment</p>
             <div className="mt-4">
-              <a href="https://github.com/Mattia-Franchini/portfolio" className="text-blue-500 hover:underline">Link to github</a>
+              <a href="https://github.com/Mattia-Franchini/portfolio" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link to github</a>
             </div>
           </div>
           <div
