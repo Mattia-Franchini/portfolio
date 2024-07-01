@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 " id="contacts">
+    <footer className="bg-gray-800 text-white py-8 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -23,9 +23,6 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link to="projects" smooth={true} duration={500} className="hover:underline">Projects</Link>
-              </li>
-              <li className="mb-2">
-                <Link to="contacts" className="hover:underline">Contacts</Link>
               </li>
             </ul>
           </div>
