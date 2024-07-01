@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "technologies", "projects", "contacts"];
+      const sections = ["home", "technologies", "projects"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
@@ -128,21 +128,6 @@ const Header = () => {
                 onClick={() => handleSetActive("projects")}
               >
                 Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contacts"
-                smooth={true}
-                duration={500}
-                className={`block py-2 px-3 rounded cursor-pointer ${
-                  activeLink === "contacts"
-                    ? "text-blue-700"
-                    : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => handleSetActive("contacts")}
-              >
-                Contacts
               </Link>
             </li>
           </ul>
